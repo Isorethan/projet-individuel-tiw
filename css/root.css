@@ -1,0 +1,72 @@
+/* Reset */
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+/* css root */
+
+@font-face {
+    font-family: 'kaorigelmedium';
+    src: url('../assets/fonts/kaorigel-webfont.woff2') format('woff2'),
+         url('../assets/fonts/kaorigel-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'kaorigelboldbold';
+    src: url('../assets/fonts/kaorigelbold-webfont.woff2') format('woff2'),
+         url('../assets/fonts/kaorigelbold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'funny_samurai_demooutline';
+    src: url('../assets/fonts/funnysamuraidemooutline-webfont.woff2') format('woff2'),
+         url('../assets/fonts/funnysamuraidemooutline-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'funny_samurai_demoregular';
+    src: url('../assets/fonts/funnysamuraidemoregular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/funnysamuraidemoregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+:root {
+    --couleur-principal:rgba(240, 166, 202, 1);
+    --couleur-secondaire:rgba(239, 195, 230, 1);
+    --couleur-texte:rgba(184, 190, 221, 1);
+    --couleur-titres:rgba(156, 137, 184, 1);
+    font-family: 'kaorigelmedium';
+}
+
+
+/* 
+FONTS
+
+*/
+
+
+
