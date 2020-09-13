@@ -58,8 +58,12 @@ section > article {
 
 /* NAV  */
 #main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     z-index: 2;
+    width: 100%;
 
 }
 
@@ -72,6 +76,7 @@ section > article {
     position: relative;
     padding: 15px 20px;
 }
+
 
 /* #main-nav ul li::after, #main-nav ul li::before {
     position: absolute;
