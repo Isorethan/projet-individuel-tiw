@@ -23,6 +23,9 @@
 
 
 /* GLOBAL */
+body {
+    overflow-x: hidden;
+}
 
 section, header {
     min-height: 100vh;
