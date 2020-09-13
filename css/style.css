@@ -55,16 +55,31 @@ section > article {
 }
 
 /* NAV  */
-nav {
+#main-nav {
     position: fixed;
     z-index: 2;
 
 }
 
-nav  ul {
+#main-nav  ul {
     display: flex;
     list-style: none;
 }
+
+#main-nav   ul li {
+    position: relative;
+    padding: 15px 20px;
+}
+
+/* #main-nav ul li::after, #main-nav ul li::before {
+    position: absolute;
+    content: '';
+    width:150% ;
+    height: 100%;
+    background-color: bisque;
+
+
+} */
 
 /* HEADER */
 /* MAIN  */
