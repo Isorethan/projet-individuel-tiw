@@ -30,6 +30,7 @@ body {
 
 section, header {
     min-height: 100vh;
+    height: fit-content;
     min-width: 100vw;
     padding: 50px 50px 30px ;
 
