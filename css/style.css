@@ -69,6 +69,7 @@ main {
     flex-wrap: nowrap;
     width: fit-content;
     max-height: 100vh;
+    overflow: hidden;
     
 }
 /* SECTION PREPRODUCTION */
