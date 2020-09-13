@@ -57,6 +57,7 @@ section > article {
 /* NAV  */
 nav {
     position: fixed;
+    z-index: 2;
 
 }
 
