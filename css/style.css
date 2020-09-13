@@ -23,16 +23,54 @@
 
 
 /* GLOBAL */
-section {
+
+section, header {
     min-height: 100vh;
+    min-width: 100vw;
     padding: 30px 0 ;
+
+ 
+}
+
+header {
+    display: inline-block;
+    position: absolute;
+}
+
+section > article {
+    width: 60rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container h1 {
+    width: 100%;
+    text-align: center;
 }
 
 /* NAV  */
+nav {
+    position: fixed;
 
+}
+
+nav  ul {
+    display: flex;
+    list-style: none;
+}
 
 /* HEADER */
 /* MAIN  */
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    width: fit-content;
+    max-height: 100vh;
+    overflow: hidden;
+}
 /* SECTION PREPRODUCTION */
 /* SECTION PRODUCTION */
 /* SECTION POSTPRODUCTION */
