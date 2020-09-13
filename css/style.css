@@ -32,9 +32,16 @@ section, header {
     min-height: 100vh;
     height: fit-content;
     min-width: 100vw;
-    padding: 50px 50px 30px ;
+    padding: 50px 15vw 30px ;
 
  
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header {
@@ -42,14 +49,15 @@ header {
     position: absolute;
 }
 
-section > article {
-    width: 60rem;
-}
+
 
 .container {
     display: flex;
     flex-wrap: wrap;
 }
+
+
+
 
 .container h1 {
     width: 100%;
@@ -66,27 +74,26 @@ section > article {
     width: 100%;
 
 }
+#main-nav a {
+    text-decoration: none;
+}
 
 #main-nav  ul {
     display: flex;
+    float: left;
     list-style: none;
 }
 
 #main-nav   ul li {
     position: relative;
     padding: 15px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
 }
 
 
-/* #main-nav ul li::after, #main-nav ul li::before {
-    position: absolute;
-    content: '';
-    width:150% ;
-    height: 100%;
-    background-color: bisque;
 
-
-} */
 
 /* HEADER */
 /* MAIN  */
@@ -95,8 +102,54 @@ main {
     flex-wrap: nowrap;
     width: fit-content;
     max-height: 100vh;
+   
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+
+/* SECTIONS */
+
+section > article {
+    display: flex;
+    padding-left: 30px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+
+    position: relative;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 30px;
+    min-height: 25vh;
+}
+
+section > article >h2 {
+    position: absolute;
+    text-orientation: sideways-right;
+    writing-mode:vertical-rl ;
+    top: 0;
+    left: 0;
+    width: fit-content;
+    height: max-content;
+}
+section > article  > *:not(.slider){
+    max-width: calc(100% - 400px);
+    padding-left: 20px;
+
+    line-height: 1.7rem;
+    height: fit-content;
+}
+
+.slider {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+
+.slider >li {
+    display: inline-block;
+    
 }
 /* SECTION PREPRODUCTION */
 /* SECTION PRODUCTION */
