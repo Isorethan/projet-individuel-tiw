@@ -25,6 +25,7 @@
 /* GLOBAL */
 body {
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 section, header {
@@ -88,8 +89,8 @@ main {
     flex-wrap: nowrap;
     width: fit-content;
     max-height: 100vh;
-    overflow: hidden;
-    
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 /* SECTION PREPRODUCTION */
 /* SECTION PRODUCTION */
