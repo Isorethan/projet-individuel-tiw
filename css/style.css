@@ -71,6 +71,7 @@ header {
     align-items: center;
     position: fixed;
     z-index: 2;
+    background-color: var(--couleur-principal);
     width: 100%;
 
 }
@@ -128,7 +129,8 @@ section > article >h2 {
     text-orientation: sideways-right;
     writing-mode:vertical-rl ;
     top: 0;
-    left: 0;
+    left: -2rem;
+    transform: rotate(180deg);
     width: fit-content;
     height: max-content;
 }
