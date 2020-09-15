@@ -29,6 +29,7 @@ body {
 }
 
 section, header {
+    position: relative;
     min-height: 100vh;
     height: fit-content;
     min-width: 100vw;
@@ -38,11 +39,17 @@ section, header {
 }
 section {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    /* transform: skew(5deg); */
+    
 }
+
+
+
 
 header {
     display: inline-block;
@@ -152,6 +159,14 @@ section > article  > *:not(.slider){
 .slider >li {
     display: inline-block;
     
+}
+
+
+
+.subcontainer {
+    max-height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 /* SECTION PREPRODUCTION */
 /* SECTION PRODUCTION */
