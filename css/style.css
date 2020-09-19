@@ -159,20 +159,22 @@ section > article {
     padding-left: 30px;
     flex-wrap: wrap;
     max-width: 1100px;
+    width: 100%;
     position: relative;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 20vh;
     min-height: 25vh;
+
 }
 
 section > article >h2 {
-    position: absolute;
+    /* position: absolute; */
     text-orientation: sideways-right;
     writing-mode:vertical-rl ;
-    top: 0;
+    /* top: 0; */
     /* left: -2rem; */
-    left: -1.1rem;
+    /* left: -1.1rem; */
     transform: rotate(180deg);
     width: fit-content;
     height: max-content;
