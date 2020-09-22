@@ -8,6 +8,7 @@
 /* SECTION PRODUCTION */
 /* SECTION POSTPRODUCTION */
 /* FOOTER */
+/*  ANIMATIONS */
 
 
 
@@ -51,6 +52,9 @@
 body {
     overflow-x: hidden;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
 }
 
 section, header {
@@ -58,6 +62,7 @@ section, header {
     min-height: 100vh;
     height: fit-content;
     min-width: 100vw;
+    width: 100vw;
     padding: 50px 15vw 30px ;
 
  
@@ -74,12 +79,6 @@ section {
 }
 
 
-
-
-header {
-    display: inline-block;
-    position: absolute;
-}
 
 
 
@@ -114,6 +113,7 @@ header {
 }
 #main-nav a {
     text-decoration: none;
+    color: black;
 }
 
 #main-nav  ul {
@@ -131,9 +131,28 @@ header {
 }
 
 
+#main-nav.transparent {
+    background-color: transparent;
+}
+
 
 
 /* HEADER */
+
+#header {
+    display: none;
+    padding: 0;
+        
+    }
+#header.visible{
+        display: block;
+    }
+    
+    #header iframe {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
 /* MAIN  */
 main {
     display: flex;
@@ -169,22 +188,27 @@ section > article {
 }
 
 section > article >h2 {
-    /* position: absolute; */
+    position: absolute;
     text-orientation: sideways-right;
     writing-mode:vertical-rl ;
-    /* top: 0; */
-    /* left: -2rem; */
-    /* left: -1.1rem; */
+    top: 0;
+
+    left: -2.8rem;
     transform: rotate(180deg);
+    text-align: right;
     width: fit-content;
     height: max-content;
 }
 section > article  > *:not(.slider){
     max-width: calc(100% - 400px);
     padding-left: 20px;
-
+    opacity: 0;
     line-height: 1.7rem;
     height: fit-content;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    animation-name: slideDown;
+    animation-fill-mode: forwards;
 }
 
 
@@ -204,11 +228,12 @@ section > article p, section > article div , section > article ol {
     
 }
 
-.subcontainer::-webkit-scrollbar {
+.subcontainer::-webkit-scrollbar, body::-webkit-scrollbar  {
     display: none;
   }
 
 .subcontainer {
+    display: none;
     max-height: 100vh;
     overflow: hidden;
     overflow-y: scroll;
@@ -216,7 +241,39 @@ section > article p, section > article div , section > article ol {
   scrollbar-width: none;  /* Firefox */
 
 }
+
+.subcontainer.visible {
+    display:block ;
+    animation-duration: 1s;
+    animation-name: slidein;
+}
 /* SECTION PREPRODUCTION */
 /* SECTION PRODUCTION */
 /* SECTION POSTPRODUCTION */
 /* FOOTER */
+/*  ANIMATIONS */
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+  @keyframes slideDown {
+      from {
+          top:-50%;
+          left:30px ;
+          opacity: 0;
+      }
+      to {
+    
+ 
+          opacity: 1;
+      }
+  }
