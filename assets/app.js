@@ -1,23 +1,19 @@
 const links = document.querySelectorAll("#main-nav ul a");
 const mainNav = document.getElementById("main-nav")
 const sections = document.querySelectorAll("section");
-const divs = document.querySelectorAll('section.subcontainer');
 const header = document.getElementById("header");
 const articles = document.querySelectorAll( "section > article")
 const visibleArticles = document.querySelectorAll(' section.visible > article')
- 
+const logo = document.querySelector('#logo');
 
-AOS.init();
+
 
 for (const link of links) {
   link.addEventListener("click", clickHandler);
 }
  
 
-window.addEventListener("scroll" , function(){
-  const body = document.querySelector('body')
-  console.log(window.scrollY)
-})
+
 
 
 
@@ -32,12 +28,12 @@ function clickHandler(e) {
     let sectionId = "#"+section.id ;
     if (href === sectionId ) {
     
-      section.parentElement.classList.add('visible')
+      section.classList.add('visible')
       document.querySelector(href).scrollIntoView({
         behavior: "instant"
       });
     } else {
-      section.parentElement.classList.remove('visible')
+      section.classList.remove('visible')
     }
   }
   
@@ -46,11 +42,22 @@ function clickHandler(e) {
 }
 
 
+
+function turnTransparent(e) {
+  e.preventDefault();
 if (header.classList.contains('visible')) {
-  mainNav.classList.remove("transparent");
+   mainNav.classList.remove("transparent");
+}else {
+  mainNav.classList.add("transparent")
+}
 }
 
+logo.addEventListener('click', turnTransparent)
  
 
+let intersectionObserver = new IntersectionObserver( function(entry) {
+
+})
 
 
+//  SLIDER JS

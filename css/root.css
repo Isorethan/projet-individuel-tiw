@@ -59,6 +59,7 @@
     --couleur-secondaire:rgba(239, 195, 230, 1);
     --couleur-texte:rgba(184, 190, 221, 1);
     --couleur-titres:rgba(156, 137, 184, 1);
+    --couleur-text-nav:rgba(0, 0 , 0, 1)
     font-family: 'kaorigelmedium';
 }
 
