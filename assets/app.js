@@ -61,3 +61,11 @@ let intersectionObserver = new IntersectionObserver( function(entry) {
 
 
 //  SLIDER JS
+
+
+
+// footer date
+let dt = document.querySelector('footer span:last-of-type');
+
+let dateYear =new Date()
+dt.innerText = dateYear.getFullYear() ;

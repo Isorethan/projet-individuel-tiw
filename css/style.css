@@ -77,8 +77,8 @@ section>article:not(:last-of-type){
     min-height: 70vh;
 }
 section >article > * {
-    break-inside: avoid;
-    page-break-inside: avoid;
+    break-inside: auto;
+    /* page-break-inside: avoid; */
 
 }
 section >article h2 {
@@ -119,16 +119,21 @@ section {
 
 
 
-
+/* FOOTER */
 
 
 footer {
     /* position: fixed; */
     left: 0;
     bottom: 0;
-    height: 40px;
+    display: flex;
+    height: 80px;
+    justify-content: center;
     width: 100%;
+    align-items: center;
     background-color: var(--couleur-principal);
+    color: #fff;
+    font-family: 'kaorigelboldbold';
 }
 
 
