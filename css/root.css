@@ -52,10 +52,65 @@
 }
 
 
+@font-face {
+    font-family: 'manga_templeregular';
+    src: url('../assets/fonts/mangat-webfont.woff2') format('woff2'),
+         url('../assets/fonts/mangat-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'manga_templebold';
+    src: url('../assets/fonts/mangatb-webfont.woff2') format('woff2'),
+         url('../assets/fonts/mangatb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'manga_templeitalic';
+    src: url('../assets/fonts/mangati-webfont.woff2') format('woff2'),
+         url('../assets/fonts/mangati-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'catcafemedium';
+    src: url('../assets/fonts/catcafe-webfont.woff2') format('woff2'),
+         url('../assets/fonts/catcafe-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'catcafemedium';
+    src: url('../assets/fonts/catcafe-webfont.woff2') format('woff2'),
+         url('../assets/fonts/catcafe-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 
 :root {
     --couleur-principal:rgba(240, 166, 202, 1);
+    --couleur-principal-transparente:rgba(240, 166, 202, .4);
     --couleur-secondaire:rgba(239, 195, 230, 1);
     --couleur-texte:rgba(184, 190, 221, 1);
     --couleur-titres:rgba(156, 137, 184, 1);

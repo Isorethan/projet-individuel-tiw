@@ -21,8 +21,12 @@ for (const link of links) {
 
 function clickHandler(e) {
   e.preventDefault();
-  header.classList.remove('visible')
+  for( link of links){
+    link.classList.remove('active-navlink');
+  }
+  header.classList.remove('visible');
   const href = this.getAttribute("href");
+  this.classList.add('active-navlink');
   console.log("I got cliked !"+href)
   for (section of sections) {  
     let sectionId = "#"+section.id ;
@@ -54,14 +58,23 @@ if (header.classList.contains('visible')) {
 
 logo.addEventListener('click', turnTransparent)
  
+// Intersection Observer
 
-let intersectionObserver = new IntersectionObserver( function(entry) {
+function handleIntersection(entries) {
+  entries.map((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible')
+    } else {
+      entry.target.classList.remove('visible')
+    }
+  });
+}
 
-})
-
+const observer = new IntersectionObserver(handleIntersection);
 
 //  SLIDER JS
-
+$('.slickSlider').slick({autoplay: true,
+  autoplaySpeed: 2000,});
 
 
 // footer date
@@ -69,3 +82,7 @@ let dt = document.querySelector('footer span:last-of-type');
 
 let dateYear =new Date()
 dt.innerText = dateYear.getFullYear() ;
+
+
+
+

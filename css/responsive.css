@@ -1,0 +1,47 @@
+@media (max-width: 767.98px) { 
+
+    section > article {
+        columns:1;
+        text-align: justify;
+    }
+
+    .burger {
+        display: block;
+    }
+    #main-nav {
+        position: relative;
+    }
+    #main-nav ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height:fit-content;
+        left: 0;
+        z-index: 999;
+        top:80px;
+        background-color: var(--couleur-principal);
+       
+    }
+    #main-nav ul>li {
+        height: fit-content;
+        padding: 30px 25px;
+        text-align: right;
+    }
+    #main-nav ul>li >a {
+        width: fit-content;
+    }
+    section > article h2 { 
+        width: 90%;
+    }
+ }
+
+
+
+
+ @media (max-width: 991.98px) { 
+    section > article {
+        columns:1;
+        text-align: justify;
+    }
+  }
