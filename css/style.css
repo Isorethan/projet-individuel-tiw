@@ -61,6 +61,7 @@
 .active-navlink {
     background-color: var(--couleur-secondaire);
     color: var(--couleur-titres);
+    height: 90%;
 }
 
 
@@ -121,12 +122,27 @@ section >article {
     column-gap: 60px;
     column-span: all;
     column-rule: dotted;
-    padding-bottom: 120px;
+    padding: 20px 40px;
+    border-radius: 7px;
+    margin-bottom: 45px;
+    background-color: rgb(247, 247, 247);
+
    
 }
 
+section >article:not(:last-of-type)::after {
+    content: '';
+    position: absolute;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid rgb(247, 247, 247);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -40px;
+}
 section > article h2 {
-    background-color: var(--couleur-secondaire);
+    /* background-color: var(--couleur-secondaire); */
+    background-color: #004c66;
     text-align: center;
     margin-bottom: 10px;
     margin-left: auto;
@@ -134,8 +150,10 @@ section > article h2 {
     border-radius: 7px;
     padding: 20px;
     width: 25rem;
-    color: var(--couleur-titres);
-   ;
+    color: #fff;
+    padding-bottom: 20px;
+    font-family: 'kaorigelboldbold';
+   
 }
 
 section>article:not(:last-of-type){
@@ -144,12 +162,10 @@ section>article:not(:last-of-type){
 section >article > * {
     /* break-inside: avoid; */
     page-break-inside: avoid;
+    
 
 }
-section >article h2 {
-    padding-bottom: 20px;
-    font-family: 'kaorigelmedium';
-    }
+
 
 section >article h3 {
     font-family: 'kaorigelmedium';
@@ -168,6 +184,7 @@ section >article p {
     line-height: 1.5rem;
     text-align: justify;
     padding: 7px 15px;
+    color:#2c3e4c ;
     border-radius: 7px;
 }
 section >article p:nth-of-type(odd):not(:last-of-type)::after {
@@ -264,7 +281,7 @@ footer {
     max-height: 500px;
     width: 100%;
     object-fit: contain;
-    border: var(--couleur-principal) solid 5px;
+    border: #004c66 solid 5px;
 }
 
 

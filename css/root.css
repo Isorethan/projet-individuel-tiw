@@ -30,26 +30,6 @@
 
 
 
-@font-face {
-    font-family: 'funny_samurai_demooutline';
-    src: url('../assets/fonts/funnysamuraidemooutline-webfont.woff2') format('woff2'),
-         url('../assets/fonts/funnysamuraidemooutline-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'funny_samurai_demoregular';
-    src: url('../assets/fonts/funnysamuraidemoregular-webfont.woff2') format('woff2'),
-         url('../assets/fonts/funnysamuraidemoregular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 
 @font-face {
