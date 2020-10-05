@@ -54,25 +54,10 @@
     --couleur-principal:rgb(214, 127, 169);
     --couleur-principal-transparente:rgb(234, 179, 188);
     --couleur-secondaire:rgba(239, 224, 195, .7);
-    --couleur-titres:rgba(156, 137, 184, 1);
     --couleur-text-nav:rgba(0, 0 , 0, 1)
-    /* font-family: 'kaorigelmedium'; */
+   
 }
-/* :root {
-    --couleur-principal:rgba(240, 166, 202, 1);
-    --couleur-principal-transparente:rgba(240, 166, 202, .4);
-    --couleur-secondaire:rgba(239, 195, 230, 1);
-    --couleur-texte:rgba(184, 190, 221, 1);
-    --couleur-titres:rgba(156, 137, 184, 1);
-    --couleur-text-nav:rgba(0, 0 , 0, 1)
-    font-family: 'kaorigelmedium';
-} */
 
-
-/* 
-FONTS
-
-*/
 
 
 

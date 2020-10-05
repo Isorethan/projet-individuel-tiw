@@ -1,7 +1,7 @@
 const links = document.querySelectorAll("#main-nav ul a");
 const mainNav = document.getElementById("main-nav");
 const sections = document.querySelectorAll("section");
-
+let navMenu = document.querySelector('#main-nav ul');
 const articles = document.querySelectorAll( "section > article");
 const visibleArticles = document.querySelectorAll(' section.visible > article');
 const logo = document.querySelector('#logo');
@@ -9,47 +9,10 @@ const subNavLinks = document.querySelectorAll('.subNav>li>a');
 let burger = document.querySelector('.burger');
 
 // Subnav creation
-for (section of sections){
-  let subNav = document.createElement('ul');
-  subNav.classList.add('subNav'); 
-  
-
- let Allh2 = section.querySelectorAll("h2") ;
-  
- for (h2 of Allh2) {
-  let li= document.createElement('li');
-  let a = document.createElement('a');
-   
-    h2.id = h2.innerText;
-    a.setAttribute('href','#'+h2.innerText ) ;
-    a.innerText = h2.innerText ;
-    li.appendChild(a);
-    subNav.appendChild(li);
- }
-
-  section.appendChild(subNav);
- 
-
-}
 
 
-for (subNavLink of subNavLinks) {
-  subNavLink.addEventListener('click', subNavClickHandler(e))
-}
 
-function subNavClickHandler(e) {
-  e.preventDefault();
-  const href = this.getAttribute('href') ;
-  let Allh2 = section.querySelectorAll("h2") ;
-  for (h2 of Allh2) {
-    console.log(h2.getBoundingClientRect())
-    if(href === h2.id) {
-      
-      document.querySelector(href).scrollIntoView({block:"end"});
-    }
-    
-  }
-}
+
 
 
 
@@ -59,18 +22,32 @@ for (const link of links) {
 }
  
 
-
+logo.addEventListener('click', function(e){
+  e.preventDefault();
+  (burger.classList.contains('open'))? burger.classList.remove('open'):null;
+  for(section of sections){
+    section.classList.contains("visible")? section.classList.remove('visible'): null;
+  }
+  header.style.display = "block";
+  mainNav.classList.contains('transparent')? null:mainNav.classList.add('transparent');
+  for(link of links){
+    link.classList.contains('active-navlink')?link.classList.remove('active-navlink'):null;
+  }
+  navMenu.classList.contains('active-navbar')?navMenu.classList.remove('active-navbar'): null;
+})
 
 
 
 
 // Fonction clickhandler pour la navigation principal
 function clickHandler(e) {
+  const header = document.getElementById("header");
+  header.style.display = "none";
   e.preventDefault();
   for( link of links){
     link.classList.remove('active-navlink');
   }
-  header.classList.remove('visible');
+  mainNav.classList.contains('transparent')? mainNav.classList.remove('transparent'): null ;
   const href = this.getAttribute("href");
   this.classList.add('active-navlink');
   console.log("I got cliked !"+href);
@@ -94,30 +71,6 @@ function clickHandler(e) {
 
 
 
-function turnTransparent(e) {
-  e.preventDefault();
-if (header.classList.contains('visible')) {
-   mainNav.classList.remove("transparent");
-}else {
-  mainNav.classList.add("transparent")
-}
-}
-
-logo.addEventListener('click', turnTransparent)
- 
-// Intersection Observer
-
-function handleIntersection(entries) {
-  entries.map((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible')
-    } else {
-      entry.target.classList.remove('visible')
-    }
-  });
-}
-
-const observer = new IntersectionObserver(handleIntersection);
 
 //  SLIDER JS
 $('.slickSlider').slick({autoplay: true,
@@ -142,8 +95,8 @@ dt.innerText = dateYear.getFullYear() ;
 
 // function qui cible la navbar et lui rajoute la classe active-navbar
 function toggleNavbar() {
- let navMenu = document.querySelector('#main-nav ul');
 
+  (burger.classList.contains('open'))? burger.classList.remove('open'): burger.classList.add('open');  
   navMenu.classList.toggle('active-navbar');
  
 }
@@ -152,4 +105,5 @@ function toggleNavbar() {
 
 burger.addEventListener('click', function(){
   toggleNavbar();
+
 })
