@@ -1,7 +1,7 @@
 const links = document.querySelectorAll("#main-nav ul a");
 const mainNav = document.getElementById("main-nav");
 const sections = document.querySelectorAll("section");
-const header = document.getElementById("header");
+
 const articles = document.querySelectorAll( "section > article");
 const visibleArticles = document.querySelectorAll(' section.visible > article');
 const logo = document.querySelector('#logo');
