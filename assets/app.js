@@ -7,6 +7,7 @@ const visibleArticles = document.querySelectorAll(' section.visible > article');
 const logo = document.querySelector('#logo');
 const subNavLinks = document.querySelectorAll('.subNav>li>a'); 
 let burger = document.querySelector('.burger');
+let backTop = document.querySelector('.toTop');
 
 // Subnav creation
 
@@ -14,7 +15,10 @@ let burger = document.querySelector('.burger');
 
 
 
-
+backTop.addEventListener('click', function (e){
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+})
 
 
 for (const link of links) {

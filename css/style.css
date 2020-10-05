@@ -16,7 +16,21 @@
 
 
 
-
+.toTop{
+    display: block;
+    position: fixed;
+    bottom: 100px;
+    background-color: var(--couleur-principal-transparente);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    right: 15px;
+    z-index: 5;
+   
+}
 
 /* NAV  */
 #main-nav {
